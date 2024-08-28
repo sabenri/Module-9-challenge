@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+
 function renderLicenseBadge(license) {
   if (license === 'Apache License 2.0') {
     return "https://img.shields.io/badge/Apache%20License%202.0-blue";
@@ -15,9 +14,20 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === 'Apache License 2.0') {
+    return "https://apache.org/licenses/LICENSE-2.0";
+  }
+  else if (license === 'MIT License') {
+    return "https://mit-license.org/"
+  }
+  else if (license === 'Eclipse Public License') {
+    return "https://www.eclipse.org/legal/epl-2.0/";
+  }
+  else {
+    return ""
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
