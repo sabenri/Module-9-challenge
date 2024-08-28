@@ -60,8 +60,12 @@ function writeToFile(fileName, data) {
     console.log('Your README.md has been made!')
 }
 
-// TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt (questions).then((date) => {
+        console.log(JSON.stringify(date, null, ""));
+        writeToFile("README.md", date);
+    })
+}
 
 // Function call to initialize app
 init();
