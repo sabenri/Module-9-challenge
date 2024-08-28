@@ -1,9 +1,7 @@
 
 const inquirer = require('inquirer');
-const fs=require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
-const { type } = require('os');
-const { default: Choices } = require('inquirer/lib/objects/choices');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 const questions = [
     {
