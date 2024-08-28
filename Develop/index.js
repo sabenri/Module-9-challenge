@@ -32,16 +32,16 @@ const questions = [
         message:"Please list any contributors to your project:"
       },
       {
-        type:"list",
-        name:"License",
-        message:"Please choose a liscense for your project:",
-        Choices: [
+        type: "list",
+        name: "license",
+        message: "Please choose a license for your project:",
+        choices: [
             'Apache License 2.0',
             'MIT License',
             'Eclipse Public License',
-            'None'
-        ]
-      },
+            'None',
+        ],
+    },
     {
         type:"input",
         name:"Email",
@@ -61,9 +61,9 @@ function writeToFile(fileName, data) {
 }
 
 function init() {
-    inquirer.prompt (questions).then((date) => {
-        console.log(JSON.stringify(date, null, ""));
-        writeToFile("README.md", date);
+    inquirer.prompt (questions).then((data) => {
+        console.log(JSON.stringify(data, null, ""));
+        writeToFile("README.md", data);
     })
 }
 
