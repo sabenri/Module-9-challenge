@@ -1,1 +1,66 @@
 
+const inquirer = require('inquirer');
+const fs=require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
+const { type } = require('os');
+const { default: Choices } = require('inquirer/lib/objects/choices');
+
+// TODO: Create an array of questions for user input
+const questions = [
+    {
+        type:"input",
+        name:"Title",
+        message:"Please input the title for your project:"
+    },
+    {
+        type:"input",
+        name:"Description",
+        message:"Please describe your project:"
+    },
+    {
+        type:"input",
+        name:"Usage",
+        message:"Please describe what your project would be uged for:"
+    },
+    {
+        type:"input",
+        name:"Insallation",
+        message:"Please describe how to insall your project:"  
+      },
+      {
+        type:"input",
+        name:"Contributor",
+        message:"Please list any contributors to your project:"
+      },
+      {
+        type:"list",
+        name:"License",
+        message:"Please choose a liscense for your project:",
+        Choices: [
+            'Apache License 2.0',
+            'MIT License',
+            'Eclipse Public License',
+            'None'
+        ]
+      },
+    {
+        type:"input",
+        name:"Email",
+        message:"Please input your email:"
+    },
+    {
+        type:"input",
+        name:"User",
+        message:"Please input yor GitHub username:"
+    }
+    
+];
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {}
+
+// TODO: Create a function to initialize app
+function init() {}
+
+// Function call to initialize app
+init();
