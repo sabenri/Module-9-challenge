@@ -5,7 +5,6 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const { type } = require('os');
 const { default: Choices } = require('inquirer/lib/objects/choices');
 
-// TODO: Create an array of questions for user input
 const questions = [
     {
         type:"input",
@@ -56,8 +55,10 @@ const questions = [
     
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeToFile(fileName, date);
+    console.log('Your README.md has been made!')
+}
 
 // TODO: Create a function to initialize app
 function init() {}
