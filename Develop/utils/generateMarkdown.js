@@ -31,14 +31,43 @@ function renderLicenseLink(license) {
 
 function renderLicenseSection(license) {
   if (!license){
-    return'';
-    return 'this project is licensed with ${license}',
-  }
+    return'';}
+    else {
+
+    return 'this project is licensed with ${license}';}
+  
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.Title}
+
+  ## Description 
+  ${data.Description}
+
+  ## Table of Contents
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [Contributor]](#Contributor)
+  - [license]](#license)
+  - [questions]](#questions)
+
+  ## Installation
+  ${data.Installation}
+
+  ##Usage
+  ${data.Usage}
+
+  ##Contributor
+  ${data.Contributor}
+
+  ##license
+  this project is licensed with ${data.license}.
+
+  ## Questions 
+  If you have any questions, Please contact me at ${data.email}.
+  you can find my work at [GitHub](http://github.com/${data.User}).
+
 
 `;
 }
